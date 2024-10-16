@@ -1,0 +1,11 @@
+a:visited {
+    color: green;
+}
+
+h2:target {
+    color: green;
+}
+
+h2:target::before {
+    content: "\203A\00a0"; 
+}

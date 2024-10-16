@@ -1,0 +1,20 @@
+body {
+    counter-reset: title;
+}
+
+h2 {
+    counter-reset: subtitle;
+}
+
+h2::before {
+    content: "Capítulo " counter(title) ": ";
+    color: blue;
+    counter-increment: title;
+}
+
+h3::after {
+    content: "- Subsección " counter(title) "." counter(subtitle);
+    color: green;
+    font-style: italic;
+    counter-increment: subtitle;
+}

@@ -1,0 +1,17 @@
+body {
+    counter-reset: title;
+}
+
+h2 {
+    counter-reset: subtitle;
+}
+
+h2::before {
+    content: counter(title)")";
+    counter-increment: title;
+}
+
+h3::before {
+    content: counter(title)"."counter(subtitle)")";
+    counter-increment: subtitle;
+}

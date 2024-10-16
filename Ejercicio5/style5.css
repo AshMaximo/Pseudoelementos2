@@ -1,0 +1,82 @@
+section {
+  border: 1px solid black;
+  padding: 1.3em;
+  background-color: whitesmoke;
+  margin: 0.5em;
+  border-radius: 1.5em;
+}
+body {
+  counter-reset: nEjer;
+}
+h2::after {
+  content: " " counter(nEjer);
+  counter-increment: nEjer;
+}
+
+/*1*/
+#e1 ol li:first-child {
+  color: green;
+}
+
+#e1 ol li:last-child {
+  color: red;
+}
+
+/*2*/
+#e2 > p:nth-child(2) {
+  border-top: 1px solid black;
+}
+
+#e2 p:last-child {
+  border-bottom: 1px solid black;
+}
+
+/*3*/
+#e3 ol:nth-child(2) li:nth-child(even) {
+  text-decoration: underline;
+}
+
+#e3 ol:nth-child(2) li:nth-child(odd) {
+  text-decoration: line-through;
+}
+
+#e3 ol:nth-child(3) li:nth-child(4n) {
+  color: lime;
+}
+
+/*4*/
+#e4 {
+  counter-reset: title;
+}
+#e4 h3::after {
+  content: " " counter(title);
+  counter-increment: title;
+}
+#e4 h3:nth-of-type(odd) {
+  text-decoration: underline;
+}
+
+/*5*/
+#e5 p strong:first-of-type {
+  background-color: lightgrey;
+  text-decoration: underline;
+}
+
+/*6*/
+#e6 ol li::first-letter {
+  text-decoration: underline;
+}
+
+/*7*/
+strong::before {
+  content: "¡";
+}
+strong::after {
+  content: "!";
+}
+
+/*8*/
+#e8 p::before {
+  content: "- 😃 ";
+  color: red;
+}

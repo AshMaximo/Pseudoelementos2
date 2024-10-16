@@ -1,0 +1,21 @@
+input[type="text"]{
+    background-color: green;
+}
+input[disabled]{
+background-color:red;
+}
+input[type="text"]:hover{
+    background-color: #ffffe0;
+}
+input[type="text"]:focus{
+    background-color: #add86e;
+}
+input[type="radio"]:checked + label{
+    font-style: italic;
+}
+input[type="checkbox"]:checked + label{
+    background-color: gold;
+    font-weight: bolder;
+}
+
+
